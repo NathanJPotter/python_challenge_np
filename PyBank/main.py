@@ -7,7 +7,7 @@ import csv
 
 # Specify os path for reading csv file
 
-csv_path = os.path.join('..', 'Resources', 'budget_data.csv')
+csv_path = os.path.join('..', 'PyBank/Resources', 'budget_data.csv')
 print(csv_path)
 
 # Specify os path for writing text file

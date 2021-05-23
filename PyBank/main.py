@@ -12,7 +12,7 @@ print(csv_path)
 
 # Specify os path for writing text file
 
-text_path = os.path.join('..', 'Analysis', 'financial_analysis.txt')
+text_path = os.path.join('..', 'PyBank/Analysis', 'financial_analysis.txt')
 print(text_path)
 
 # Give text file the title 'Financial Analysis'. Print.
@@ -27,12 +27,10 @@ print(title_line)
 
 # Write title to text file
 
-text_file_title = ["Financial Analysis", "------------------------------"]
+text_file_title = ["Financial Analysis \n", "------------------------------ \n"]
 
-with open('financial_analysis.txt', 'w') as f:
-    for line in text_file_title:
-        f.write(str(text_file_title))
-        f.write('\n')
+with open(text_path, 'w') as f:
+    f.writelines(text_file_title)
 
 # Calculate total number of months
 

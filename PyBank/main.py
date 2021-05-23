@@ -34,6 +34,11 @@ with open(text_path, 'w') as f:
 
 # Calculate total number of months
 
+with open(csv_path, newline= '') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+        break
 
     # Print and write to text file the total number of months
 

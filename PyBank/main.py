@@ -36,9 +36,19 @@ with open(text_path, 'w') as f:
 
 with open(csv_path, newline= '') as f:
     reader = csv.reader(f)
+    dist = 0
     for row in reader:
-        print(row)
-        break
+        _dist = row[1]
+        try:
+            _dist = float(_dist)
+        except ValueError:
+            _dist = 0
+
+        dist =+ _dist
+
+        total_PL = dist =+ _dist
+
+        print(total_PL)
 
     # Print and write to text file the total number of months
 

@@ -8,12 +8,10 @@ import csv
 # Specify os path for reading csv file
 
 csv_path = os.path.join('..', 'PyBank/Resources', 'budget_data.csv')
-print(csv_path)
 
 # Specify os path for writing text file
 
 text_path = os.path.join('..', 'PyBank/Analysis', 'financial_analysis.txt')
-print(text_path)
 
 # Give text file the title 'Financial Analysis'. Print.
 
@@ -36,19 +34,9 @@ with open(text_path, 'w') as f:
 
 with open(csv_path, newline= '') as f:
     reader = csv.reader(f)
-    dist = 0
-    for row in reader:
-        _dist = row[1]
-        try:
-            _dist = float(_dist)
-        except ValueError:
-            _dist = 0
-
-        dist =+ _dist
-
-        total_PL = dist =+ _dist
-
-        print(total_PL)
+    lines = len(list(reader))
+    total_months = "Total Months: " + str(lines - 1)
+    print(total_months)
 
     # Print and write to text file the total number of months
 

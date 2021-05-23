@@ -1,5 +1,12 @@
 # This is a script to run a financial analysis of budget_data for the PyBank exercise
 
+# Give text file the title 'Financial Analysis'. Print the title.
+
+print("Financial Analysis")
+
+print("------------------------------")
+
+
 # Import the os module for creating file paths across operating systems. And import the module for reading CSV files
 
 import os
@@ -15,7 +22,17 @@ print(csv_path)
 text_path = os.path.join('..', 'Analysis', 'financial_analysis.txt')
 print(text_path)
 
-# Give text file the title 'Financial Analysis'
+# Give text file the title 'Financial Analysis'. Print and write title to text file.
+
+# title = "Financial Analysis"
+
+# print(title)
+
+# title_line = "------------------------------"
+
+# print(title_line)
+
+
 
 
 # Calculate total number of months
@@ -51,4 +68,4 @@ print(text_path)
 
     # Print and write to text file the greatest decrease in losses
 
-    
+

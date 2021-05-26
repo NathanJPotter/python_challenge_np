@@ -63,10 +63,12 @@ av_pl_change = sum(profit_change) / len(profit_change)
 
 # Calculate the greatest increase in profits
 
-
+max_profit_increase = max(profit_change)
 
 
 # Calculate the greatest decrease in losses
+
+
 
 
 # Print results to terminal
@@ -87,6 +89,8 @@ print(f"Total: ${round(net_prof_loss)}")
 
 print(f"Average Change: ${av_pl_change: .2f}")
 
+print(f"Max Profit Change: ${round(max_profit_increase)}")
+
 
 # Write results to text file
 text_file_title = ["Financial Analysis \n", "------------------------------ \n"]
@@ -97,3 +101,4 @@ with open(text_path, 'w') as f:
     f.write('\n')
     f.write(f"Total: ${round(net_prof_loss)}")
     f.write('\n')
+    f.write(f"Average Change: ${av_pl_change: .2f}")

@@ -95,9 +95,9 @@ print(f"Total: ${round(net_prof_loss)}")
 
 print(f"Average Change: ${av_pl_change: .2f}")
 
-print(f"Greatest Increase in Profits: {max_profit_month} $({round(max_profit_increase)})")
+print(f"Greatest Increase in Profits: {max_profit_month} (${round(max_profit_increase)})")
 
-print(f"Max Loss Change: ${round(max_loss_decrease)}")
+print(f"Greatest Decrease in Profits: {max_loss_month} (${round(max_loss_decrease)})")
 
 # Write results to text file
 text_file_title = ["Financial Analysis \n", "------------------------------ \n"]
@@ -109,3 +109,6 @@ with open(text_path, 'w') as f:
     f.write(f"Total: ${round(net_prof_loss)}")
     f.write('\n')
     f.write(f"Average Change: ${av_pl_change: .2f}")
+    f.write('\n')
+    f.write(f"Greatest Increase in Profits: {max_profit_month} (${round(max_profit_increase)})")
+    f.write('\n')

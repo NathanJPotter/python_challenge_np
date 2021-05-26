@@ -14,10 +14,16 @@ csv_path = os.path.join('..', 'PyBank/Resources', 'budget_data.csv')
 text_path = os.path.join('..', 'PyBank/Analysis', 'financial_analysis.txt')
 
 
+# Create lists to hold data
+
+months = []
+profit_loss = []
+
+
 # Calculate total number of months
 
-with open(csv_path, newline= '') as f:
-    reader = csv.reader(f)
+with open(csv_path, newline="") as csv_file:
+    reader = csv.reader(csv_file)
     header = next(reader)
     lines = len(list(reader))
     total_months = "Total Months: " + str(lines)

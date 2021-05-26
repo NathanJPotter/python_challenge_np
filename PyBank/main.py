@@ -90,5 +90,5 @@ with open(text_path, 'w') as f:
     f.writelines(text_file_title)
     f.write("Total Months: " + str(total_months))
     f.write('\n')
-    f.write("Total: " + str(net_prof_loss))
+    f.write(f"Total: ${round(net_prof_loss)}")
     f.write('\n')

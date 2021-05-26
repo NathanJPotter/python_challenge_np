@@ -18,40 +18,37 @@ text_path = os.path.join('..', 'PyBank/Analysis', 'financial_analysis.txt')
 
 with open(csv_path, newline= '') as f:
     reader = csv.reader(f)
+    header = next(reader)
     lines = len(list(reader))
-    total_months = "Total Months: " + str(lines - 1)
+    total_months = "Total Months: " + str(lines)
  
 
 
-    # Print and write to text file the total number of months
+
 
 
 # Calculate net total profit/losses over period
 
 
-    # Print and write to text file the total profit/losses
 
 
 # Calculate the changes in profit/losses over the period
 
 
 
+
 # Calculate the average of changes in profits/losses
 
 
-    # Print and write to text file the average of changes in profits/losses
 
 
 # Calculate the greatest increase in profits
 
 
-    # Print and write to text file the greatest increase in profits
 
 
 # Calculate the greatest decrease in losses
 
-
-    # Print and write to text file the greatest decrease in losses
 
 # Print results to terminal
 
@@ -74,5 +71,3 @@ with open(text_path, 'w') as f:
     f.writelines(text_file_title)
     f.write(total_months)
     f.write('\n')
-
-

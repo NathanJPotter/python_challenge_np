@@ -112,3 +112,4 @@ with open(text_path, 'w') as f:
     f.write('\n')
     f.write(f"Greatest Increase in Profits: {max_profit_month} (${round(max_profit_increase)})")
     f.write('\n')
+    f.write(f"Greatest Decrease in Profits: {max_loss_month} (${round(max_loss_decrease)})")

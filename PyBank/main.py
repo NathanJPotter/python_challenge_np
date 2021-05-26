@@ -38,6 +38,7 @@ with open(csv_path, newline= '') as f:
     total_months = "Total Months: " + str(lines - 1)
     print(total_months)
 
+
     # Print and write to text file the total number of months
 
 

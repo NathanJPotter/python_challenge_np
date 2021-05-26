@@ -36,7 +36,7 @@ with open(csv_path, newline="") as csv_file:
         months.append(row[0])
 
         # Add profit/loss value to profit_loss list
-        profit_loss.append(float(row[1]))
+        profit_loss.append(int(row[1]))
  
 
 # Calculate total number of months
@@ -46,7 +46,7 @@ total_months = (len(months))
 
 # Calculate net total profit/losses over period
 
-net_prof_loss = sum(profit_loss)
+net_prof_loss = (sum(profit_loss))
 
 
 # Calculate the changes in profit/losses over the period
@@ -79,17 +79,16 @@ title_line = "------------------------------"
 
 print(title_line)
 
-print("Total months: " + str(total_months))
+print("Total Months: " + str(total_months))
 
-print("Total: " + str(profit_loss))
+print(f"Total: ${round(net_prof_loss)}")
 
 # Write results to text file
 text_file_title = ["Financial Analysis \n", "------------------------------ \n"]
 
 with open(text_path, 'w') as f:
     f.writelines(text_file_title)
-    f.write("Total months: " + str(total_months))
+    f.write("Total Months: " + str(total_months))
     f.write('\n')
-    f.write("Total: " + str(profit_loss))
+    f.write("Total: " + str(net_prof_loss))
     f.write('\n')
-    

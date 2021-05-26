@@ -65,11 +65,17 @@ av_pl_change = sum(profit_change) / len(profit_change)
 
 max_profit_increase = max(profit_change)
 
+    # Find the date using the index of the greatest profit
+index_max_profit = profit_change.index(max_profit_increase)
+max_profit_month = months[max_profit_increase]
 
 # Calculate the greatest decrease in losses
 
-min_profit_decrease = min(profit_change)
+max_loss_decrease = min(profit_change)
 
+    # Find the date using the index of the greatest loss
+index_max_loss = profit_change.index(max_loss_decrease)
+max_loss_month = months[max_loss_decrease]
 
 # Print results to terminal
 
@@ -91,7 +97,7 @@ print(f"Average Change: ${av_pl_change: .2f}")
 
 print(f"Max Profit Change: ${round(max_profit_increase)}")
 
-print(f"Min Profit Change: ${round(min_profit_decrease)}")
+print(f"Max Loss Change: ${round(max_loss_decrease)}")
 
 # Write results to text file
 text_file_title = ["Financial Analysis \n", "------------------------------ \n"]

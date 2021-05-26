@@ -68,7 +68,7 @@ max_profit_increase = max(profit_change)
 
 # Calculate the greatest decrease in losses
 
-
+min_profit_decrease = min(profit_change)
 
 
 # Print results to terminal
@@ -91,6 +91,7 @@ print(f"Average Change: ${av_pl_change: .2f}")
 
 print(f"Max Profit Change: ${round(max_profit_increase)}")
 
+print(f"Min Profit Change: ${round(min_profit_decrease)}")
 
 # Write results to text file
 text_file_title = ["Financial Analysis \n", "------------------------------ \n"]

@@ -1,3 +1,4 @@
+  
 # This is a script to run a financial analysis of budget_data for the PyBank exercise
 
 # Import the os module for creating file paths across operating systems. And import the module for reading CSV files
@@ -18,6 +19,7 @@ text_path = os.path.join('..', 'PyBank/Analysis', 'financial_analysis.txt')
 
 months = []
 profit_loss = []
+profit_change = []
 
 
 # Open and read CSV file
@@ -51,13 +53,13 @@ net_prof_loss = (sum(profit_loss))
 
 # Calculate the changes in profit/losses over the period
 
-
-
+for i in range(len(profit_loss)-1):
+    profit_change.append(profit_loss[i+1]-profit_loss[i])
+    
 
 # Calculate the average of changes in profits/losses
 
-
-
+av_pl_change = sum(profit_change) / len(profit_change)
 
 # Calculate the greatest increase in profits
 
@@ -82,6 +84,9 @@ print(title_line)
 print("Total Months: " + str(total_months))
 
 print(f"Total: ${round(net_prof_loss)}")
+
+print(f"Average Change: ${av_pl_change: .2f}")
+
 
 # Write results to text file
 text_file_title = ["Financial Analysis \n", "------------------------------ \n"]

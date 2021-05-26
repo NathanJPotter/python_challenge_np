@@ -13,22 +13,6 @@ csv_path = os.path.join('..', 'PyBank/Resources', 'budget_data.csv')
 
 text_path = os.path.join('..', 'PyBank/Analysis', 'financial_analysis.txt')
 
-# Give text file the title 'Financial Analysis'. Print.
-
-title = "Financial Analysis"
-
-print(title)
-
-title_line = "------------------------------""------------------------------"
-
-print(title_line)
-
-# Write title to text file
-
-text_file_title = ["Financial Analysis \n", "------------------------------ \n"]
-
-with open(text_path, 'w') as f:
-    f.writelines(text_file_title)
 
 # Calculate total number of months
 
@@ -36,7 +20,7 @@ with open(csv_path, newline= '') as f:
     reader = csv.reader(f)
     lines = len(list(reader))
     total_months = "Total Months: " + str(lines - 1)
-    print(total_months)
+ 
 
 
     # Print and write to text file the total number of months
@@ -68,5 +52,27 @@ with open(csv_path, newline= '') as f:
 
 
     # Print and write to text file the greatest decrease in losses
+
+# Print results to terminal
+
+    # Give text file the title 'Financial Analysis'. Print.
+
+title = "Financial Analysis"
+
+print(title)
+
+title_line = "------------------------------"
+
+print(title_line)
+
+print(total_months)
+
+# Write results to text file
+text_file_title = ["Financial Analysis \n", "------------------------------ \n"]
+
+with open(text_path, 'w') as f:
+    f.writelines(text_file_title)
+    f.write(total_months)
+    f.write('\n')
 
 

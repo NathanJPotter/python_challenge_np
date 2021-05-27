@@ -71,17 +71,10 @@ for candidate in vote_count:
 
     vote_percentage[candidate] = (vote_count[candidate] / total_votes) * 100
 
-
+    # Retrieve the winner of the election
     if vote_count[candidate] > winner_count:
         winner_count = vote_count[candidate]
         winner = candidate
-
-# Calculate the number of votes each candidate won
-
-
-
-# Retrieve the winner of the election based on number of votes
-
 
 
 # Give text file the title 'Election Results'. Print.
@@ -90,9 +83,12 @@ print("Election Results")
 print("------------------------------")
 print("Total Votes: " + str(total_votes))
 print("------------------------------")
-print(vote_count)
+for candidate, votes in vote_count.items():
+    print(f'{candidate}: {vote_percentage[candidate]: .3f}% ({votes})')
 print("------------------------------")
 print("Winner: " + winner)
+print("------------------------------")
+
 
 # Write title to text file
 

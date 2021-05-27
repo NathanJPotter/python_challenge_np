@@ -96,14 +96,12 @@ text_file_title = ["Election Results \n", "------------------------------ \n"]
 
 with open(text_path, 'w') as f:
     f.writelines(text_file_title)
-    f.write('\n')
     f.write("Total Votes: " + str(total_votes))
     f.write('\n')
     f.write("------------------------------")
     f.write('\n')
     for candidate, votes in vote_count.items():
         f.write(f'{candidate}: {vote_percentage[candidate]: .3f}% ({votes})\n')
-    f.write('\n')
     f.write("------------------------------")
     f.write('\n')
     f.write("Winner: " + winner)

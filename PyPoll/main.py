@@ -25,6 +25,10 @@ vote_count = {}
 
 vote_percentage = {}
 
+# Create a variable to hold the totatl vote count
+
+vote_total = 0
+
 # Create a variable to hold the total vote count
 
 winner_count = 0
@@ -60,15 +64,23 @@ total_votes = (len(votes))
 # Retrieve the full list of candidates who received votes
 
 
-# Calculate the percentage of votes each candidate won
+
+# Calculate the percentage of votes each candidate won by looping through vote_count dictionary 
+
+for candidate in vote_count:
+
+    vote_percentage[candidate] = (vote_count[candidate] / total_votes) * 100
 
 
+    if vote_count[candidate] > winner_count:
+        winner_count = vote_count[candidate]
+        winner = candidate
 
 # Calculate the number of votes each candidate won
 
 
 
-# Retrieve the winer of the election based on number of votes
+# Retrieve the winner of the election based on number of votes
 
 
 
@@ -78,6 +90,9 @@ print("Election Results")
 print("------------------------------")
 print("Total Votes: " + str(total_votes))
 print("------------------------------")
+print(vote_count)
+print("------------------------------")
+print("Winner: " + winner)
 
 # Write title to text file
 

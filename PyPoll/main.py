@@ -99,5 +99,14 @@ with open(text_path, 'w') as f:
     f.write('\n')
     f.write("Total Votes: " + str(total_votes))
     f.write('\n')
+    f.write("------------------------------")
+    f.write('\n')
+    for candidate, votes in vote_count.items():
+        f.write(f'{candidate}: {vote_percentage[candidate]: .3f}% ({votes})')
+    f.write('\n')
+    f.write("------------------------------")
+    f.write("Winner: " + winner)
+    f.write('\n')
+    f.write("------------------------------")
 
 
